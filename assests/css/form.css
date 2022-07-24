@@ -1,0 +1,108 @@
+/* ---------------- Zeichensatz definieren ------------------ */
+
+@charset "utf-8";
+
+
+/*------------------  css reset  ------------------------------*/
+
+* { 
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*------------------  Allgemeine Styles  ------------------------------*/
+
+:root {
+  --mainBlau : #4E7FBF;
+  --mainGrau : #F2F2F2 ;
+  --darkGrau : #BFBFBF ;
+  --dunkelGrau : #404040;
+  --sekBlau :  #508BBF;
+  --closeFarbe : deeppink;
+  --mainMarginTop: 3rem;
+
+
+}
+
+
+html {
+    background-color: var(--mainBlau);
+    color: var(--mainGrau);
+    font-size: x-large;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* loading  */
+#lob {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color:var(--mainGrau);
+  }
+  #lob span {
+    font-size: 80px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    line-height: 1;
+    mix-blend-mode: difference;
+  }
+  #lob::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    color: var(--mainGrau);
+    background-color: var(--mainGrau);
+    animation: move 4s linear infinite;
+    transition: 0.2s ease-in-out;
+  }
+  @keyframes move {
+    0%,
+    100% {
+      left: 0;
+    }
+    50% {
+      left: calc(100% - 100px);
+    }
+  }
+  
+  #lob h1:last-child {
+    text-align: right;
+    margin-top: 3rem ;
+  }
+  
+  #lob h1 {
+    margin-bottom: 3rem;
+  }
+  
+  @-webkit-keyframes move {
+    0%,
+    100% {
+      left: 0;
+    }
+    50% {
+      left: calc(100% - 100px);
+    }
+  }
+  
+  
+  /* bug fix for videos sliders  */
+  
+  
